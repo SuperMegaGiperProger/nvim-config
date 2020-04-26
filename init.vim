@@ -19,6 +19,9 @@ call plug#begin()
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Colorize icons
 
+  " Current line
+  Plug 'miyakogi/conoline.vim'
+
   " Markdown
   Plug 'iamcco/markdown-preview.vim'
 
@@ -44,7 +47,7 @@ call plug#begin()
     nmap ga <Plug>(EasyAlign)
   
   " Linters
-  Plug 'w0rp/ale'
+  " Plug 'w0rp/ale'
   
   " Syntax highlight
 
@@ -76,7 +79,7 @@ call plug#begin()
   " Plug 'kchmck/vim-coffee-script'
 
   " Colorschemes
-  Plug 'chriskempson/base16-vim'
+  " Plug 'chriskempson/base16-vim'
   Plug 'dikiaap/minimalist'
   
   " Plug 'roxma/python-support.nvim'
@@ -110,10 +113,10 @@ let g:nerdtree_tabs_open_on_console_startup=2
 let g:nerdtree_tabs_focus_on_files=1
 
 " ALE JS
-highlight ALEWarning ctermbg=DarkMagenta
-let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
-let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['eslint'], 'ruby': ['rubocop'] }
-map <c-A-l> :ALEFix<CR>
+" highlight ALEWarning ctermbg=DarkMagenta
+" let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
+" let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['eslint'], 'ruby': ['rubocop'] }
+" map <c-A-l> :ALEFix<CR>
 
 " Comments
 let g:NERDSpaceDelims = 1
