@@ -1,10 +1,10 @@
 call plug#begin()
   " IntelliSence
-  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-json', 'coc-yank']
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-eslint', 'coc-emmet', 'coc-json', 'coc-yank', 'coc-highlight']
 
   " Autocomplete
-  Plug 'Shougo/deoplete.nvim'
+  " Plug 'Shougo/deoplete.nvim'
 
   " Icons
   Plug 'ryanoasis/vim-devicons'
@@ -60,11 +60,11 @@ call plug#begin()
   " Plug 'neoclide/vim-jsx-improve'
 
   " TS
-  " Plug 'leafgarland/typescript-vim'
-  " Plug 'ianks/vim-tsx'
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-  Plug 'Shougo/denite.nvim'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'ianks/vim-tsx'
+  " Plug 'HerringtonDarkholme/yats.vim'
+  " Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+  " Plug 'Shougo/denite.nvim'
   
   " NGINX
   " Plug 'chr4/nginx.vim'
@@ -77,11 +77,12 @@ call plug#begin()
 
   " Colorschemes
   Plug 'chriskempson/base16-vim'
+  Plug 'dikiaap/minimalist'
   
   " Plug 'roxma/python-support.nvim'
 call plug#end()
 
-colorscheme ron " Best: ron murphy industry elford
+" colorscheme ron " Best: ron murphy industry elford
 
 " Mouse: scroll, select, tabs, splits
 set mouse=a
@@ -123,5 +124,8 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:airline_theme='minimalist'
 
 " Autocompletion
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
