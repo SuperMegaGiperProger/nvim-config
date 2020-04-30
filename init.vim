@@ -101,6 +101,9 @@ set signcolumn=yes
 highlight LineNr ctermfg=grey ctermbg=black
 highlight SignColumn guibg=black
 
+" Popup
+highlight Pmenu ctermbg=DarkGrey ctermfg=White
+
 let NERDTreeShowHidden=1
 
 " Fzf hot-key for file searching
