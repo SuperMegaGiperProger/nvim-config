@@ -1,7 +1,7 @@
 call plug#begin()
   " IntelliSence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-eslint', 'coc-emmet', 'coc-json', 'coc-yank', 'coc-highlight']
+  let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-eslint', 'coc-emmet', 'coc-json', 'coc-yank', 'coc-highlight', 'coc-pairs']
 
   " Autocomplete
   " Plug 'Shougo/deoplete.nvim'
@@ -29,7 +29,7 @@ call plug#begin()
   Plug 'scrooloose/nerdcommenter'
 
   " Parenthise
-  Plug 'tpope/vim-surround'
+  " Plug 'tpope/vim-surround'
 
   " Bottom line
   Plug 'vim-airline/vim-airline'
@@ -80,12 +80,12 @@ call plug#begin()
 
   " Colorschemes
   " Plug 'chriskempson/base16-vim'
-  Plug 'dikiaap/minimalist'
+  " Plug 'dikiaap/minimalist'
   
   " Plug 'roxma/python-support.nvim'
 call plug#end()
 
-" colorscheme ron " Best: ron murphy industry elford
+colorscheme ron " Best: ron murphy industry elford
 
 " Mouse: scroll, select, tabs, splits
 set mouse=a
