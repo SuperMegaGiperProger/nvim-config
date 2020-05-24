@@ -1,7 +1,10 @@
 call plug#begin()
   " IntelliSence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-eslint', 'coc-emmet', 'coc-json', 'coc-yank', 'coc-highlight', 'coc-pairs']
+  let g:coc_global_extensions = [
+        \   'coc-tslint-plugin', 'coc-tsserver', 'coc-eslint',
+        \   'coc-json', 'coc-yank', 'coc-highlight', 'coc-pairs', 'coc-solargraph'
+        \ ]
 
   " Autocomplete
   " Plug 'Shougo/deoplete.nvim'
@@ -37,7 +40,8 @@ call plug#begin()
   " Plug 'itchyny/lightline.vim'
   
   " Git
-  Plug 'airblade/vim-gitgutter'
+  Plug 'airblade/vim-gitgutter' " visualization
+  Plug 'tpope/vim-fugitive' " commands
 
   " Format code to table style
   Plug 'junegunn/vim-easy-align'
@@ -52,8 +56,8 @@ call plug#begin()
   " Syntax highlight
 
   " Ruby
-  " Plug 'vim-ruby/vim-ruby'
-  " Plug 'tpope/vim-rails'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
   
   " JS
   " Plug 'pangloss/vim-javascript'
@@ -73,7 +77,7 @@ call plug#begin()
   " Plug 'chr4/nginx.vim'
 
   " Slim
-  " Plug 'slim-template/vim-slim'
+  Plug 'slim-template/vim-slim'
 
   " CoffeeScript
   " Plug 'kchmck/vim-coffee-script'
