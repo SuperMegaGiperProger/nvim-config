@@ -9,6 +9,12 @@ call plug#begin()
   " Autocomplete
   " Plug 'Shougo/deoplete.nvim'
 
+  " Themes
+  Plug 'rafi/awesome-vim-colorschemes'
+  Plug 'tomasiser/vim-code-dark'
+  Plug 'chriskempson/base16-vim'
+  Plug 'mswift42/vim-themes'
+
   " Icons
   Plug 'ryanoasis/vim-devicons'
 
@@ -26,7 +32,7 @@ call plug#begin()
   Plug 'miyakogi/conoline.vim'
 
   " Markdown
-  Plug 'iamcco/markdown-preview.vim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
   " Comments
   Plug 'scrooloose/nerdcommenter'
@@ -68,7 +74,7 @@ call plug#begin()
 
   " TS
   Plug 'leafgarland/typescript-vim'
-  Plug 'ianks/vim-tsx'
+  Plug 'maxmellon/vim-jsx-pretty'
   " Plug 'HerringtonDarkholme/yats.vim'
   " Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
   " Plug 'Shougo/denite.nvim'
@@ -89,7 +95,7 @@ call plug#begin()
   " Plug 'roxma/python-support.nvim'
 call plug#end()
 
-colorscheme ron " Best: ron murphy industry elford
+colorscheme afterglow " Best: one afterglow jellybeans ron murphy industry elford
 
 " Mouse: scroll, select, tabs, splits
 set mouse=a
