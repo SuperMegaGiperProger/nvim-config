@@ -300,3 +300,9 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" Hotkeys
+map <c-i> :CocCommand tsserver.organizeImports<CR>
+map <c-l> :CocCommand eslint.executeAutofix<CR>
+map <c-f> :CocFix<CR>
