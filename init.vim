@@ -16,7 +16,8 @@ call plug#begin()
   " Plug 'mswift42/vim-themes'
   " Plug 'romgrk/doom-one.vim'
   Plug 'rakr/vim-one'
-  Plug 'joshdick/onedark.vim'
+  " Plug 'joshdick/onedark.vim'
+  " Plug 'romgrk/doom-one.vim'
 
   " Highlight
   Plug 'sheerun/vim-polyglot'
@@ -101,6 +102,7 @@ call plug#begin()
   " Plug 'roxma/python-support.nvim'
 call plug#end()
 
+let g:airline#extensions#branch#enabled=0
 
 " Onedark theme START
 
@@ -121,9 +123,9 @@ if (empty($TMUX))
 endif
 
 syntax on
-let g:airline_theme='onedark'
-let g:airline#extensions#branch#enabled=0
-colorscheme onedark " Best: one afterglow jellybeans ron murphy industry elford
+set termguicolors
+set background=dark
+colorscheme one " Best: one afterglow jellybeans ron murphy industry elford
 
 " Onedark theme END
 
