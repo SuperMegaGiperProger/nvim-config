@@ -1,13 +1,15 @@
-call plug#begin()
+ call plug#begin()
   " IntelliSence
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = [
         \   'coc-tslint-plugin', 'coc-tsserver', 'coc-eslint',
-        \   'coc-json', 'coc-yank', 'coc-highlight', 'coc-pairs', 'coc-solargraph'
+        \   'coc-json', 'coc-yank', 'coc-highlight', 'coc-pairs',
         \ ]
 
   " Autocomplete
   " Plug 'Shougo/deoplete.nvim'
+
+  Plug 'preservim/tagbar'
 
   " Themes
   " Plug 'rafi/awesome-vim-colorschemes'
@@ -126,6 +128,23 @@ syntax on
 set termguicolors
 set background=dark
 colorscheme one " Best: one afterglow jellybeans ron murphy industry elford
+let g:airline_theme='onedark'
+
+if &background == 'dark'
+  highlight CocHighlightText guibg=CadetBlue4
+  highlight CursorLine guibg=gray10
+  highlight CursorLineNr guibg=black
+  highlight LineNr ctermfg=grey ctermbg=black
+  highlight SignColumn guibg=black
+  highlight Pmenu ctermbg=DarkGrey ctermfg=White
+else
+  highlight CocHighlightText guibg=PaleTurquoise
+  highlight CursorLine guibg=gray10
+  highlight CursorLineNr guibg=lightgrey
+  highlight LineNr ctermfg=grey ctermbg=black
+  highlight SignColumn guibg=grey
+  highlight Pmenu ctermbg=DarkGrey ctermfg=White
+endif
 
 " Onedark theme END
 
@@ -140,16 +159,16 @@ set expandtab
 " Left column
 set number
 set signcolumn=yes
-highlight LineNr ctermfg=grey ctermbg=black
-highlight SignColumn guibg=black
 
 " Popup
-highlight Pmenu ctermbg=DarkGrey ctermfg=White
 
 let NERDTreeShowHidden=1
 
 " Fzf hot-key for file searching
 map <c-p> :Files<CR>
+
+map <c-n> <plug>NERDTreeTabsToggle<CR>
+map <c-t> :TagbarToggle<CR>
 
 " Ag
 set runtimepath^=~/.vim/bundle/ag

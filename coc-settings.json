@@ -1,5 +1,7 @@
 {
+  "coc.preferences.jumpCommand": "drop",
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.updateImportsOnFileMove.enable": false,
   "solargraph.useBundler": true,
   "solargraph.diagnostics": true
 }
